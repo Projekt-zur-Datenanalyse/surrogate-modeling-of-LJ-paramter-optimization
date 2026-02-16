@@ -26,7 +26,7 @@ The central question is:
 
     - RMSE
     - MAE
-    - relative to simulation uncertainty
+    - error relative to simulation uncertainty
 
 4. Assess whether surrogate models can replace MD simulations within acceptable uncertainty bounds.
 
@@ -62,12 +62,16 @@ For modeling and evaluation purposes, main dependencies were:
 - sklearn
 - torch
 
+This project was developed and tested on an Apple Silicon device (MPS backend for PyTorch).
+
+While the code should run on other systems (CPU or CUDA-enabled NVIDIA GPUs), these configurations were not explicitly tested. Minor device-specific adjustments (e.g., selecting cpu, cuda, or mps) may be required depending on the hardware setup.
+
 ---
 
 ## Notebook Workflow
 
 1. Data Loading
-2. Data Cleaning and Explorative Data Analysis
+2. Data Cleaning and Exploratory Data Analysis
 3. Training of a simple Neural Network (NN)
 4. Training of the same architecture NN with different Active Learning Strategies
     - Random Sampling
@@ -105,4 +109,17 @@ In this context, computational speed often outweighs the need for perfect accura
 
 > Surrogate models are powerful acceleration tools for parameter exploration and optimization, but they should complement, not fully replace, MD simulations.
 
+---
+
+## Reproducibility Note
+
+For reproducibility, the global SEED value should not be modified.
+
+Full retraining of all models (especially Active Learning loops) is computationally intensive.
+
+Therefore, not all notebook cells were re-executed in the final committed version.
+
+All reported results and saved models in the `final/` directory correspond to completed training runs. The notebook can be fully re-executed to reproduce the results, though runtime may be substantial depending on hardware.
+
+Full experiment takes 6-8 hours on MPS backend (Apple M4 Max 16inch). Mostly due to QBC strategy.
 

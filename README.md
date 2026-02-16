@@ -8,7 +8,7 @@ In this project, MD simulations based on Lennard-Jones potential parameters are 
 
 The central question is:
 
-> Can surrogate models replace MD simulations — or are they limited to accelerating parameter exploration?
+> Can surrogate models replace MD simulations - or are they limited to accelerating parameter exploration?
 
 ---
 

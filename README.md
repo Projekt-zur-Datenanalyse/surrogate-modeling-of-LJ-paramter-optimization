@@ -18,15 +18,15 @@ The central question is:
 
 2. Compare:
 
-  - Random sampling
-  - Boundary-based sampling
-  - Active learning strategies
+    - Random sampling
+    - Boundary-based sampling
+    - Active learning strategies
 
 3. Evaluate predictive performance using:
 
-  - RMSE
-  - MAE
-  - relative to simulation uncertainty
+    - RMSE
+    - MAE
+    - relative to simulation uncertainty
 
 4. Assess whether surrogate models can replace MD simulations within acceptable uncertainty bounds.
 
@@ -70,11 +70,11 @@ For modeling and evaluation purposes, main dependencies were:
 2. Data Cleaning and Explorative Data Analysis
 3. Training of a simple Neural Network (NN)
 4. Training of the same architecture NN with different Active Learning Strategies
-  - Random Sampling
-  - Boundary Sampling
-  - Sparse Sampling
-  - Error-based Sampling
-  - Query-By-Committee (QBC)
+    - Random Sampling
+    - Boundary Sampling
+    - Sparse Sampling
+    - Error-based Sampling
+    - Query-By-Committee (QBC)
 5. Evaluation of different models and strategies
 
 ---
